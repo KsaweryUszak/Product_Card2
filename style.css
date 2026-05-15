@@ -1,0 +1,136 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  --grey-500: hsl(234, 12%, 34%);
+  --grey-400: hsl(212, 6%, 44%);
+  --white: hsl(0, 0%, 100%);
+
+  --shadow: 0 15px 30px rgba(131, 166, 210, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+  color: var(--grey-500);
+
+  display: flex;
+  justify-content: center;
+
+  padding: 5rem 2rem;
+}
+
+.features-section {
+  width: 100%;
+  max-width: 1110px;
+}
+
+.intro {
+  max-width: 540px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2px;
+  font-weight: 600;
+}
+
+.intro h1 span {
+  display: block;
+  font-weight: 200;
+}
+
+.intro p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--grey-400);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.middle-column {
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: var(--shadow);
+
+  transition: transform 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.8125rem;
+  line-height: 1.8;
+  color: var(--grey-400);
+}
+
+.card img {
+  width: 64px;
+  align-self: flex-end;
+  margin-top: 2rem;
+}
+
+.supervisor {
+  border-top: 4px solid var(--cyan);
+}
+
+.team-builder {
+  border-top: 4px solid var(--red);
+}
+
+.karma {
+  border-top: 4px solid var(--orange);
+}
+
+.calculator {
+  border-top: 4px solid var(--blue);
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 4rem 1.5rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
